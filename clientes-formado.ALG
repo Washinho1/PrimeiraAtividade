@@ -52,7 +52,7 @@ fimprocedimento
 procedimento chamaPaciente()
 inicio
 
-  se (quantidade <= 5) entao
+  se (quantidade <= 5) entao        // cria limitador de usuarios
      limpatela
        escreval ("Nome: ")
      leia (nome[quantidade])
@@ -75,7 +75,7 @@ inicio
      escreval("Digite 1 para sim e 2 para não")
         leia (adiciona)
        se adiciona = 1 entao
-       chamaPaciente()
+       chamaPaciente()                           // se desejar volta a função novamente
        fimse
        se adiciona = 2 entao
        escreval("voltando ao menu")
@@ -91,7 +91,7 @@ Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
 quantidade <- 1
 
-enquanto verdadeiro faca
+enquanto verdadeiro faca                            // repetição para voltaro ao menu
                    limpatela
                 escreval("-------Menu Principal-------")
                 escreval("Digite o numero da função")
@@ -103,15 +103,15 @@ enquanto verdadeiro faca
                 leia(opcao)
 
 
-               escolha opcao
+               escolha opcao                    // chama funçao que cria o usuario
                 caso 1
                      chamaPaciente()
 
 
-                caso 2
+                caso 2                          // chama função que cria destino
                      criadestino()
 
-                caso 3
+                caso 3                          // checa todos os clientes criados
                       quantidade <- 1
                       limpatela
                       para quantidade de 1 ate 5 faca
@@ -130,7 +130,7 @@ enquanto verdadeiro faca
                          escreval (" ")
                       fimpara
                      adiciona <- 1
-                              escreval("Digite sim para voltar ao menu")
+                              escreval("Aperte enter para voltar ao menu")
                               leia (adiciona)
                             escreval("voltando ao menu")
                 fimescolha
