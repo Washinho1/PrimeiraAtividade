@@ -1,10 +1,10 @@
 Algoritmo "Cliente Cadastro"
-// Disciplina   : [Linguagem e LÛgica de ProgramaÁ„o]
-// DescriÁ„o   : programa cria um usuario, adiciona destino e faz consulta dos usuarios
+// Disciplina   : [Linguagem e L√≥gica de Programa√ß√£o]
+// Descri√ß√£o   : programa cria um usuario, adiciona destino e faz consulta dos usuarios
 // Autor(a)    : Nome do(a) aluno(a) washingotn william pereira da silva junior
 // Data atual  : 22/06/2022
 Var
-// SeÁ„o de DeclaraÁıes das vari·veis 
+// Se√ß√£o de Declara√ß√µes das vari√°veis 
 nome : vetor [1..5] de caractere
 email : vetor [1..5] de caractere
 cpf : vetor [1..5] de caractere
@@ -27,7 +27,7 @@ limpatela
      escreval(" ")
      escreval(" ")
              escreval("Deseja cadastrar mais um destino?")
-             escreval("Digite 1 para sim e 2 para n„o")
+             escreval("Digite 1 para sim e 2 para n√£o")
         leia (adiciona)
        se adiciona = 1 entao
        criadestino()
@@ -40,7 +40,7 @@ fimprocedimento
 procedimento chamaMenu()
              inicio
                 escreval("-------Menu Principal-------")
-                escreval("Digite o numero da funÁ„o")
+                escreval("Digite o numero da fun√ß√£o")
                 escreval("1 - Cadastrar um usuario")
                 escreval("2 - Cadastrar um destino")
                 escreval("3 - Consultar todos os usuarios")
@@ -49,7 +49,7 @@ procedimento chamaMenu()
                 leia(opcao)
 fimprocedimento
 
-procedimento chamaPaciente()
+procedimento criaCliente()
 inicio
 
   se (quantidade <= 5) entao        // cria limitador de usuarios
@@ -72,10 +72,10 @@ inicio
      escreval(" ")
      
      escreval("Deseja cadastrar mais um usuario?")
-     escreval("Digite 1 para sim e 2 para n„o")
+     escreval("Digite 1 para sim e 2 para n√£o")
         leia (adiciona)
        se adiciona = 1 entao
-       chamaPaciente()                           // se desejar volta a funÁ„o novamente
+       CriaCliente()                           // se desejar volta a fun√ß√£o novamente
        fimse
        se adiciona = 2 entao
        escreval("voltando ao menu")
@@ -88,13 +88,13 @@ escreval ("numero de cadastro indisponivel")
 fimprocedimento
 
 Inicio
-// SeÁ„o de Comandos, procedimento, funÁıes, operadores, etc...
+// Se√ß√£o de Comandos, procedimento, fun√ß√µes, operadores, etc...
 quantidade <- 1
 
-enquanto verdadeiro faca                            // repetiÁ„o para voltaro ao menu
+enquanto verdadeiro faca                            // repeti√ß√£o para voltaro ao menu
                    limpatela
                 escreval("-------Menu Principal-------")
-                escreval("Digite o numero da funÁ„o")
+                escreval("Digite o numero da fun√ß√£o")
                 escreval("1 - Cadastrar um usuario")
                 escreval("2 - Cadastrar um destino (necessario id do usuario)")
                 escreval("3 - Consultar todos os usuarios e/ou pegar ID")
@@ -103,15 +103,15 @@ enquanto verdadeiro faca                            // repetiÁ„o para voltaro ao
                 leia(opcao)
 
 
-               escolha opcao                    // chama funÁao que cria o usuario
+               escolha opcao
                 caso 1
-                     chamaPaciente()
+                     criaCliente()
 
 
-                caso 2                          // chama funÁ„o que cria destino
+                caso 2
                      criadestino()
 
-                caso 3                          // checa todos os clientes criados
+                caso 3
                       quantidade <- 1
                       limpatela
                       para quantidade de 1 ate 5 faca
